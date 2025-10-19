@@ -85,7 +85,7 @@ export default function Home() {
                     info@deepmarkinsight.com
                   </a>
                 </p>
-                <p>Phone: +25 803 581 0248</p>
+                <p>Phone: +234 803 5816 248</p>
               </div>
             </div>
 
