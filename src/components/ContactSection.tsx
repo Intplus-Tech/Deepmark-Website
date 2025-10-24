@@ -59,7 +59,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.fullName || !formData.email || !formData.message) {
       toast({
@@ -89,16 +89,15 @@ const ContactSection = () => {
   return (
     <section ref={sectionRef} className="py-20 px-6 md:px-12 bg-[hsl(var(--hero-overlay))] text-[hsl(var(--text-light))]">
       <div className="max-w-7xl mx-auto">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-12 h-px bg-white/20"></div>
+          <span className="text-sm text-[hsl(var(--text-muted))] uppercase tracking-wider">
+            Let's Talk
+          </span>
+        </div>
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div ref={textRef} className="space-y-8">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-px bg-white/20"></div>
-              <span className="text-sm text-[hsl(var(--text-muted))] uppercase tracking-wider">
-                Let's Talk
-              </span>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+          <div ref={textRef} className="space-y-8 h-full flex flex-col justify-between">
+            <h2 className="text-4xl font-bold text-white leading-tight">
               Not sure which solution fits your challenge? Let's find the right insight together.
             </h2>
 
@@ -107,28 +106,30 @@ const ContactSection = () => {
             </p>
           </div>
 
-          <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-            <div className="relative">
-              <User className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" />
-              <Input
-                type="text"
-                placeholder="Full Name*"
-                value={formData.fullName}
-                onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                className="pl-12 bg-white/5 border-white/10 text-white placeholder:text-white/40 focus:bg-white/10 focus:border-white/20"
-                required
-              />
-            </div>
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-8">
+            <div className="flex flex-col xl:flex-row gap-8 items-center w-full">
+              <div className="relative w-full">
+                <User className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" />
+                <Input
+                  type="text"
+                  placeholder="Full Name*"
+                  value={formData.fullName}
+                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                  className="pl-12 bg-white/5 border-white/10 w-full text-white placeholder:text-white/40 focus:bg-white/10 focus:border-white/20"
+                  required
+                />
+              </div>
 
-            <div className="relative">
-              <Smartphone className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" />
-              <Input
-                type="tel"
-                placeholder="Mobile"
-                value={formData.mobile}
-                onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                className="pl-12 bg-white/5 border-white/10 text-white placeholder:text-white/40 focus:bg-white/10 focus:border-white/20"
-              />
+              <div className="relative  w-full">
+                <Smartphone className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" />
+                <Input
+                  type="tel"
+                  placeholder="Mobile"
+                  value={formData.mobile}
+                  onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+                  className="pl-12 bg-white/5 border-white/10 w-full text-white placeholder:text-white/40 focus:bg-white/10 focus:border-white/20"
+                />
+              </div>
             </div>
 
             <div className="relative">
@@ -165,9 +166,9 @@ const ContactSection = () => {
               required
             />
 
-            <Button 
-              type="submit" 
-              className="bg-white text-[hsl(var(--hero-overlay))] hover:bg-white/90 font-semibold group"
+            <Button
+              type="submit"
+              className="bg-white rounded-full text-[hsl(var(--hero-overlay))] hover:bg-white/90 font-semibold group"
             >
               Get in Touch
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

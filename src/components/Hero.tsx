@@ -81,7 +81,7 @@ const Hero = () => {
     >
       <div className="absolute inset-0 bg-[hsl(var(--hero-overlay))]/70" />
 
-      <div className="container mx-auto px-6 relative z-10 xl:mt-40">
+      <div className="container max-w-7xl mx-auto px-6 relative z-10 xl:mt-40">
         <div ref={badgeRef} className="mb-8">
           <Button
             variant="secondary"
@@ -96,7 +96,7 @@ const Hero = () => {
           ref={headlineRef}
           className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
         >
-          Transform Market Complexity into Your <br /> Competitive Advantage.
+          Transform Market Complexity into Your <br className="hidden md:block" /> Competitive Advantage.
         </h1>
 
         <p

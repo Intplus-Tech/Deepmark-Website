@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import expertiseImage from "@/assets/expertise.jpg";
-import precisionImage from "@/assets/precision.jpg";
-import clarityImage from "@/assets/clarity.jpg";
+import value1 from "@/assets/value-1.png";
+import value2 from "@/assets/value-2.png";
+import value3 from "@/assets/value-3.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -10,17 +10,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 const values = [
   {
-    image: expertiseImage,
+    image: value1,
     title: "25+ Years of Expertise",
     description: "Leverage a legacy of research leadership and proven success to guide your most critical decisions."
   },
   {
-    image: precisionImage,
+    image: value2,
     title: "Uncompromising Precision",
     description: "Our commitment to methodological rigor guarantees data integrity and insights you can trust without question."
   },
   {
-    image: clarityImage,
+    image: value3,
     title: "Actionable Clarity",
     description: "We translate complex data into clear, strategic direction, empowering you to act with conviction."
   }
@@ -76,8 +76,8 @@ const OurValue = () => {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-            From Deep Data to Marked Meaning
+          <h2 className="text-4xl font-bold text-foreground leading-tight">
+            From Deep Data to Marked <br className="hidden md:block" /> Meaning
           </h2>
         </div>
 

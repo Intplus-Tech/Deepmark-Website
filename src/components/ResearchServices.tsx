@@ -1,15 +1,17 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { 
-  BarChart3, 
-  Megaphone, 
-  Heart, 
-  ClipboardCheck, 
-  Star, 
-  Users, 
-  Package, 
-  FlaskConical, 
-  Vote 
+import {
+  BarChart3,
+  Megaphone,
+  Heart,
+  ClipboardCheck,
+  Star,
+  Users,
+  Package,
+  FlaskConical,
+  Vote
 } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,47 +22,56 @@ const services = [
   {
     icon: BarChart3,
     title: "Ad Hoc Studies",
-    description: "Tailored research projects designed to answer specific, time-sensitive business questions, providing critical strategic intelligence for critical decision-making."
+    description:
+      "Tailored research projects designed to answer specific, time-sensitive business questions, providing critical strategic intelligence for critical decision-making."
   },
   {
     icon: Megaphone,
     title: "Advertising Research",
-    description: "Pre- and post-campaign analysis that measures impact, message recall, and brand lift to maximize the ROI and effectiveness of your investment of your marketing communications."
+    description:
+      "Pre- and post-campaign analysis that measures impact, message recall, and brand lift to maximize the ROI and effectiveness of your investment of your marketing communications."
   },
   {
     icon: Heart,
     title: "Brand Health Tracker",
-    description: "Ongoing measurement of your brand's vital signs—including awareness, usage, perception, and sentiment—to monitor performance and track the impact of your initiatives over time."
+    description:
+      "Ongoing measurement of your brand's vital signs—including awareness, usage, perception, and sentiment—to monitor performance and track the impact of your initiatives over time."
   },
   {
     icon: ClipboardCheck,
     title: "Customer Intercept Surveys",
-    description: "Real-time feedback captured at critical touch point of experience, delivering immediate intelligence about customer perceptions, and brand interactions in a retail context."
+    description:
+      "Real-time feedback captured at critical touch point of experience, delivering immediate intelligence about customer perceptions, and brand interactions in a retail context."
   },
   {
     icon: Star,
     title: "Customer Satisfaction Surveys",
-    description: "Systematic measurement of customer experience and loyalty to identify key drivers of satisfaction, mitigate churn, and foster long-term brand advocacy."
+    description:
+      "Systematic measurement of customer experience and loyalty to identify key drivers of satisfaction, mitigate churn, and foster long-term brand advocacy."
   },
   {
     icon: Users,
     title: "Customer Usage, Habits & Attitude Studies",
-    description: "In-depth profiling of consumer behavior that reveals the underlying motivations, routines, and attitudes that drive category decisions, and brand choice."
+    description:
+      "In-depth profiling of consumer behavior that reveals the underlying motivations, routines, and attitudes that drive category decisions, and brand choice."
   },
   {
     icon: Package,
     title: "Distribution Checks",
-    description: "Comprehensive audits of your product's retail presence, measuring availability, positioning, and compliance and share to determine sales performance and market penetration."
+    description:
+      "Comprehensive audits of your product's retail presence, measuring availability, positioning, and compliance and share to determine sales performance and market penetration."
   },
   {
     icon: FlaskConical,
     title: "Full Mix Consumer Product Test",
-    description: "Rigorous in-home or central location testing that evaluates product performance, acceptability, and key attributes against competitive and internal product benchmarks to guide innovation."
+    description:
+      "Rigorous in-home or central location testing that evaluates product performance, acceptability, and key attributes against competitive and internal product benchmarks to guide innovation."
   },
   {
     icon: Vote,
     title: "Opinion Poll Study (OPS)",
-    description: "Authoritative measurement of public opinion on social, political, or corporate issues, presenting a statistically sound snapshot of the prevailing attitudes of relevant audiences."
+    description:
+      "Authoritative measurement of public opinion on social, political, or corporate issues, presenting a statistically sound snapshot of the prevailing attitudes of relevant audiences."
   }
 ];
 
@@ -104,7 +115,10 @@ const ResearchServices = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 px-6 md:px-12 bg-[hsl(var(--hero-overlay))] text-[hsl(var(--text-light))]">
+    <section
+      ref={sectionRef}
+      className="py-20 px-6 md:px-12 bg-[hsl(var(--hero-overlay))] text-[hsl(var(--text-light))]"
+    >
       <div className="max-w-7xl mx-auto">
         <div ref={headingRef} className="mb-16">
           <div className="flex items-center gap-3 mb-6">
@@ -114,7 +128,7 @@ const ResearchServices = () => {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight max-w-4xl">
+          <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight max-w-5xl">
             We offer a comprehensive suite of quantitative and qualitative research solutions designed to answer your most pressing business questions and uncover critical market opportunities.
           </h2>
         </div>
@@ -123,16 +137,21 @@ const ResearchServices = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card 
-                key={index} 
-                className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors backdrop-blur-sm"
+              <Card
+                key={index}
+                className="group bg-white/5 border-none hover:bg-white/10 transition-colors backdrop-blur-sm"
               >
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
                     <CardTitle className="text-white text-lg font-semibold">
                       {service.title}
                     </CardTitle>
-                    <Icon className="h-5 w-5 text-white/60 flex-shrink-0" />
+                    <div className="size-10 rounded-full bg-[hsl(var(--hero-overlay))] flex items-center justify-center">
+                      <Icon
+                        className="h-5 w-5 text-white/60 flex-shrink-0 transition-all duration-300
+                      group-hover:fill-white group-hover:text-white group-hover:stroke-none"
+                      />
+                    </div>
                   </div>
                   <CardDescription className="text-[hsl(var(--text-muted))] text-sm leading-relaxed">
                     {service.description}

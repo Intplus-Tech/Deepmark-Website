@@ -60,10 +60,10 @@ const WhyChoose = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="pt-40 pb-20 px-6 md:px-12 bg-background">
+    <section ref={sectionRef} className="pt-40 pb-20 px-6 md:px-12 bg-background max-w-7xl mx-auto">
       <div className="mx-auto">
         <div className="grid md:grid-cols-3 gap-12 items-center">
-          <div className="space-y-8 col-span-2">
+          <div className="space-y-8 md:col-span-2">
             <div ref={headingRef}>
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-12 h-px bg-foreground/20"></div>
@@ -72,7 +72,7 @@ const WhyChoose = () => {
                 </span>
               </div>
 
-              <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-foreground leading-10">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-foreground leading-10">
                 We are a premier partner for authoritative market intelligence,
                 built on a over 25-year legacy of research excellence.
               </h2>
@@ -80,7 +80,7 @@ const WhyChoose = () => {
 
             <div ref={contentRef} className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-lg font-semibold text-foreground mb-3">
                   Custom Research Design
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -98,7 +98,7 @@ const WhyChoose = () => {
               </p>
             </div>
 
-            <div className="flex items-center justify-between pt-6">
+            <div className="flex flex-col md:flex-row items-center justify-between pt-6">
               <div className="flex items-center gap-4">
                 <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full border">
                   <ChevronLeft className="h-5 w-5" />
@@ -119,11 +119,11 @@ const WhyChoose = () => {
             </div>
           </div>
 
-          <div ref={imageRef} className="relative flex items-center justify-end w-fit ml-auto col">
+          <div ref={imageRef} className="relative flex items-center justify-end">
             <img
               src={productsImage}
               alt="Research products showcase"
-              className="rounded-lg shadow-xl w-[450px] h-auto"
+              className="w-full h-auto"
             />
           </div>
         </div>
