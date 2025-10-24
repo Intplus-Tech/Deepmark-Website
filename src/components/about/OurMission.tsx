@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Check } from "lucide-react";
-import teamImage from "@/assets/team-collaboration.png";
+import teamImage from "@/assets/team-union.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -102,15 +102,22 @@ const OurMission = () => {
         className="py-20 bg-[hsl(var(--footer-bg))] text-white"
       >
         <div className="container mx-auto px-6">
-          <div ref={missionTextRef} className="max-w-4xl">
-            <p className="text-white/60 text-sm mb-4 uppercase tracking-wider">
-              Our Mission
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              To provide businesses with the most authoritative market intelligence, transforming complex data into strategic clarity and competitive advantage.
+          <div ref={missionTextRef} className="max-w-5xl">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-px bg-white/50"></div>
+              <span className="text-sm text-muted-foreground uppercase tracking-wider">
+                Our Mission
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl mb-6">
+              To provide businesses with the most authoritative market
+              intelligence, transforming complex data into strategic clarity and
+              competitive advantage.
             </h2>
-            <p className="text-white/80 text-lg leading-relaxed">
-              We bridge the gap between raw information and actionable strategy, empowering organizations to navigate market dynamics with confidence and precision.
+            <p className="text-3xl md:text-4xl">
+              We bridge the gap between raw information and actionable strategy,
+              empowering organizations to navigate market dynamics with
+              confidence and precision.
             </p>
           </div>
         </div>
@@ -119,10 +126,6 @@ const OurMission = () => {
       {/* Purpose Section */}
       <section ref={purposeRef} className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <p className="text-muted-foreground text-sm mb-4 uppercase tracking-wider">
-            Our Vision and Values
-          </p>
-          
           <div
             ref={purposeImageRef}
             className="relative w-full h-[400px] mb-12 rounded-2xl overflow-hidden"
@@ -132,29 +135,29 @@ const OurMission = () => {
               alt="Company Purpose - Team Collaboration"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-white text-6xl md:text-8xl font-bold tracking-tight opacity-90 mix-blend-overlay">
-                COMPANY
-                <br />
-                PURPOSE
-              </h2>
-            </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
+          <div className="flex items-center gap-3 mb-8 mt-20">
+            <div className="w-12 h-px bg-foreground/20"></div>
+            <span className="text-sm text-muted-foreground uppercase tracking-wider">
+              Our Vision and Values
+            </span>
+          </div>
+          <div className="grid lg:grid-cols-3  gap-12 items-start">
+            <div className="lg:col-span-2 mb-8">
               <h3
                 ref={purposeHeadingRef}
-                className="text-2xl md:text-3xl font-bold text-foreground mb-6"
+                className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium 2xl:leading-10 text-foreground mb-6"
               >
-                Building a more intelligent business landscape by providing unparalleled clarity and strategic direction to organizations.
+                Building a more intelligent business landscape by providing
+                unparalleled clarity and strategic direction to organizations.
               </h3>
             </div>
-            
+
             <div ref={valuesRef} className="grid grid-cols-2 gap-4">
               {values.map((value, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                  <Check className="w-5 h-5 text-red-500 flex-shrink-0" />
                   <span className="text-foreground font-medium">{value}</span>
                 </div>
               ))}

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import AboutHero from "@/components/about/AboutHero";
 import WhatWeDo from "@/components/about/WhatWeDo";
 import OurMission from "@/components/about/OurMission";
+import ContactSection from "@/components/ContactSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,6 +22,7 @@ const About = () => {
         <AboutHero />
         <WhatWeDo />
         <OurMission />
+        <ContactSection />
       </main>
       <Footer />
     </div>

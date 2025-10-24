@@ -53,64 +53,81 @@ const WhatWeDo = () => {
     {
       icon: Target,
       title: "Depth of Sector Expertise",
-      description: "Our research is informed by deep, cross-industry knowledge, allowing us to quickly grasp your unique business context and competitive landscape.",
+      description:
+        "Our research is informed by deep, cross-industry knowledge, allowing us to quickly grasp your unique business context and competitive landscape.",
     },
     {
       icon: GitBranch,
       title: "End-to-End Methodology",
-      description: "From study design and data collection to advanced analysis and strategic synthesis, we provide a seamless, integrated approach.",
+      description:
+        "From study design and data collection to advanced analysis and strategic synthesis, we provide a seamless, integrated approach.",
     },
     {
       icon: Lightbulb,
       title: "Actionable Intelligence",
-      description: "We go beyond raw data to deliver strategic recommendations that are practical, actionable, and designed to drive measurable business outcomes.",
+      description:
+        "We go beyond raw data to deliver strategic recommendations that are practical, actionable, and designed to drive measurable business outcomes.",
     },
     {
       icon: CheckCircle2,
       title: "Rigorous Precision",
-      description: "Our commitment to methodological integrity and data quality ensures that every insight we deliver is reliable, accurate, and trustworthy.",
+      description:
+        "Our commitment to methodological integrity and data quality ensures that every insight we deliver is reliable, accurate, and trustworthy.",
     },
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-background">
-      <div className="container mx-auto px-6">
-        <p className="text-muted-foreground text-sm mb-4 uppercase tracking-wider">
-          What we do
-        </p>
-        
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+    <section ref={sectionRef} className="py-20 bg-background container mx-auto">
+      <div className="flex items-center gap-3 mb-8">
+        <div className="w-12 h-px bg-foreground/20"></div>
+        <span className="text-sm text-muted-foreground uppercase tracking-wider">
+          What We Do
+        </span>
+      </div>
+      <div className=" px-6 grid grid-cols-2">
+        <div className="gap-12 mb-16 max-w-[80%]">
           <div>
-            <h2 ref={headingRef} className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              We deliver deep market intelligence that illuminates opportunities and informs strategy.
+            <h2
+              ref={headingRef}
+              className="text-3xl md:text-4xl font-medium leading-10 text-foreground mb-6"
+            >
+              We deliver deep market intelligence that illuminates opportunities
+              and informs strategy.
             </h2>
           </div>
           <div>
-            <p ref={descriptionRef} className="text-muted-foreground text-base leading-relaxed mb-6">
-              With over 25 years of specialized experience, we have guided more than 50 client projects, developing unmatched sector expertise and a profound understanding of the nuanced factors that drive market behavior.
+            <p
+              ref={descriptionRef}
+              className="text-muted-foreground text-base leading-relaxed mb-6"
+            >
+              With over 25 years of specialized experience, we have guided more
+              than 50 client projects, developing unmatched sector expertise and
+              a profound understanding of the nuanced factors that drive market
+              behavior.
             </p>
-            <p ref={descriptionRef} className="text-muted-foreground text-base leading-relaxed">
-              Here are the key differentiators that separate us from other firms:
+            <p
+              ref={descriptionRef}
+              className="text-muted-foreground text-base leading-relaxed"
+            >
+              Here are the key differentiators that separate us from other
+              firms:
             </p>
           </div>
         </div>
 
-        <div ref={cardsRef} className="grid md:grid-cols-2 gap-8">
+        <div ref={cardsRef} className="flex flex-col gap-8">
           {features.map((feature, index) => (
-            <div
-              key={index}
-              className="flex gap-4 p-6 rounded-lg border border-border bg-card hover:shadow-lg transition-shadow"
-            >
+            <div key={index} className="flex gap-8 bg-card ml-auto max-w-[80%]">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <feature.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-[#B3B3B2] flex items-center justify-center">
+                  <feature.icon className="w-6 h-6 text-[#1D60E5]" />
                 </div>
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm">
                   {feature.description}
                 </p>
               </div>

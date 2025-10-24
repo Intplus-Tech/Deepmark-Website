@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/services-hero-bg.jpg";
+import { Separator } from "../ui/separator";
 
 const ServicesHero = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -13,29 +14,31 @@ const ServicesHero = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
-      
+
       tl.fromTo(
         headingRef.current,
         { y: 50, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
-      ).fromTo(
-        statsRef.current?.children || [],
-        { y: 30, opacity: 0, scale: 0.95 },
-        { 
-          y: 0, 
-          opacity: 1, 
-          scale: 1,
-          duration: 0.6, 
-          stagger: 0.15,
-          ease: "power3.out" 
-        },
-        "-=0.4"
-      ).fromTo(
-        buttonRef.current,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
-        "-=0.3"
-      );
+      )
+        .fromTo(
+          statsRef.current?.children || [],
+          { y: 30, opacity: 0, scale: 0.95 },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 0.6,
+            stagger: 0.15,
+            ease: "power3.out",
+          },
+          "-=0.4"
+        )
+        .fromTo(
+          buttonRef.current,
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
+          "-=0.3"
+        );
     }, sectionRef);
 
     return () => ctx.revert();
@@ -50,7 +53,7 @@ const ServicesHero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[600px] flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -60,22 +63,26 @@ const ServicesHero = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center py-20">
-        <p className="text-white/80 text-sm mb-4 uppercase tracking-wider">Services</p>
-        
+        <Separator className="mb-3 w-[30px] mx-auto" />
+        <p className="text-white/80 text-sm font-bold mb-12 tracking-wider">
+          Services
+        </p>
+
         <h1
           ref={headingRef}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-16 max-w-4xl mx-auto"
+          className="text-4xl md:text-5xl font-semibold text-white mb-16 max-w-4xl mx-auto"
         >
-          Delivering insights for industry leaders and institutions
+          Delivering insights for <br className="hidden md:block" /> industry
+          leaders and institutions
         </h1>
 
-        <div ref={statsRef} className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+        <div
+          ref={statsRef}
+          className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12"
+        >
           {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20"
-            >
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">
+            <div key={index} className="">
+              <div className="text-5xl font-semibold text-white mb-2">
                 {stat.number}
                 <span className="text-primary">{stat.suffix}</span>
               </div>
@@ -87,7 +94,7 @@ const ServicesHero = () => {
         <div ref={buttonRef}>
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-white px-8 gap-2"
+            className="bg-white text-foreground hover:bg-primary/90 hover:text-white rounded-full px-8 gap-2"
           >
             Talk to Our Experts
             <ArrowRight className="w-4 h-4" />
