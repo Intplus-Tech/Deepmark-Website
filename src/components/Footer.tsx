@@ -6,7 +6,7 @@ import { ArrowRight, Facebook, Linkedin, Twitter } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logo from "@/assets/logo-dark.svg";
-
+import Union from "@/assets/footer-union.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,18 +54,20 @@ const Footer = () => {
   return (
     <footer ref={footerRef} className="">
       <div className="">
-        <div className="mb-16 bg-[hsl(var(--footer-bg))]  px-6 py-16">
+        <div className="mb-16 bg-[hsl(var(--footer-bg))]  px-6 py-16 relaltive">
           <div className="container mx-auto flex flex-col md:flex-row justify-between gap-8">
-
             <div className="w-full">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                Stay Informed with <br className="hidden md:block" /> Deepmark Insights
+                Stay Informed with <br className="hidden md:block" /> Deepmark
+                Insights
               </h2>
               <p className="text-white/70 mb-6 max-w-2xl">
                 Get authoritative market intelligence direct to your inbox
               </p>
               <p className="text-white/60 text-sm mb-6 max-w-2xl">
-                The latest research, sector analysis, and strategic insights, sent straight to <br className="hidden md:block" /> your inbox every month.
+                The latest research, sector analysis, and strategic insights,
+                sent straight to <br className="hidden md:block" /> your inbox
+                every month.
               </p>
             </div>
             <div className="flex flex-col gap-3 w-full items-end">
@@ -82,6 +84,14 @@ const Footer = () => {
               </Button>
             </div>
           </div>
+
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180 z-0">
+            <img
+              src={Union}
+              alt="Footer Decorative Element"
+              className="w-full block"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12 container mx-auto text-foreground">
@@ -94,7 +104,9 @@ const Footer = () => {
               />
             </Link>
             <p className="text-sm mb-6 max-w-[400px]">
-              Deepmark Insight Data transforms complex market information into profound clarity, empowering businesses to make strategic decisions with confidence.
+              Deepmark Insight Data transforms complex market information into
+              profound clarity, empowering businesses to make strategic
+              decisions with confidence.
             </p>
             {/* <div className="flex gap-4">
               <a href="#" className=" transition-colors size-10 rounded-full flex items-center justify-center border">
