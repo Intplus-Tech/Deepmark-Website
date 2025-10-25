@@ -11,7 +11,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-hidden">
       <Header />
       <main className="pt-16">
         <div className="container mx-auto py-16">

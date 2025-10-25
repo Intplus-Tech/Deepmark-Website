@@ -16,7 +16,7 @@ const Service = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
+      <main className="overflow-hidden">
         <ServicesHero />
         <ServicesGrid />
       </main>

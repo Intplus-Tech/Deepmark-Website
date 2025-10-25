@@ -18,7 +18,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="">
+      <main className="overflow-hidden">
         <AboutHero />
         <WhatWeDo />
         <OurMission />
