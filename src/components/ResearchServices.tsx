@@ -123,6 +123,7 @@ const ResearchServices = () => {
   return (
     <section
       ref={sectionRef}
+      id="researchSection"
       className="py-20 px-6 md:px-12 bg-[hsl(var(--hero-overlay))] text-[hsl(var(--text-light))]"
     >
       <div className="max-w-7xl mx-auto">

@@ -87,7 +87,7 @@ const Hero = () => {
             variant="secondary"
             className="bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-sm rounded-full"
           >
-            Check out our Services
+            <a href="#researchSection">Check out our Services</a>
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
@@ -114,7 +114,13 @@ const Hero = () => {
             size="lg"
             className="bg-white hover:bg-white/90 text-[hsl(var(--hero-overlay))] font-semibold rounded-full px-8"
           >
-            Unlock Your Insights
+            <a
+              href="https://calendly.com/femisesan/deepmark-initial-consultation"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Unlock Your Insights
+            </a>
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>

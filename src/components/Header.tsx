@@ -34,10 +34,11 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const headerClasses = `fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled
+  const headerClasses = `fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+    isScrolled
       ? "bg-[hsl(var(--header-bg))] backdrop-blur-md shadow-md"
       : "bg-white/20"
-    }`;
+  }`;
 
   return (
     <header ref={headerRef} className={headerClasses}>
@@ -56,10 +57,11 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm transition-colors ${location.pathname === item.path
-                  ? "text-white font-medium  underline underline-offset-8"
-                  : "text-white/80 hover:text-white"
-                  }`}
+                className={`text-sm transition-colors ${
+                  location.pathname === item.path
+                    ? "text-white font-medium  underline underline-offset-8"
+                    : "text-white/80 hover:text-white"
+                }`}
               >
                 {item.label}
               </Link>
@@ -68,7 +70,13 @@ const Header = () => {
               variant="default"
               className="bg-primary hover:bg-primary/90 text-white px-6"
             >
-              Talk to Us
+              <a
+                href="https://calendly.com/femisesan/deepmark-initial-consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Talk to Us
+              </a>
             </Button>
           </nav>
 
@@ -82,17 +90,21 @@ const Header = () => {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] bg-[hsl(var(--header-bg))] border-white/10">
+            <SheetContent
+              side="right"
+              className="w-[300px] bg-[hsl(var(--header-bg))] border-white/10"
+            >
               <nav className="flex flex-col gap-6 mt-8">
                 {navItems.map((item) => (
                   <Link
                     key={item.path}
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={`text-base transition-colors ${location.pathname === item.path
-                      ? "text-white font-medium"
-                      : "text-white/80 hover:text-white"
-                      }`}
+                    className={`text-base transition-colors ${
+                      location.pathname === item.path
+                        ? "text-white font-medium"
+                        : "text-white/80 hover:text-white"
+                    }`}
                   >
                     {item.label}
                   </Link>
