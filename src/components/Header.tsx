@@ -114,7 +114,13 @@ const Header = () => {
                   className="bg-primary hover:bg-primary/90 text-white w-full mt-4"
                   onClick={() => setIsOpen(false)}
                 >
-                  Talk to Us
+                  <a
+                    href="https://calendly.com/femisesan/deepmark-initial-consultation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Talk to Us
+                  </a>
                 </Button>
               </nav>
             </SheetContent>
