@@ -94,16 +94,19 @@ const Hero = () => {
 
         <h1
           ref={headlineRef}
-          className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+          className="text-4xl md:text-7xl xl:text-6xl font-bold max-w-[90%] text-white mb-6 leading-tight"
         >
-          Transform Market Complexity into Your <br className="hidden md:block" /> Competitive Advantage.
+          Transform Market Complexity into Your
+          <br className="hidden 2xl:block" /> Competitive Advantage.
         </h1>
 
         <p
           ref={subtitleRef}
-          className="text-lg text-white/90 mb-8 max-w-2xl"
+          className="text-lg md:text-2xl xl:text-xl text-white/90 mb-8 max-w-4xl"
         >
-          Deepmark Insight Data delivers the authoritative intelligence and clarity you need to inform strategy, drive growth, and make decisions with confidence.
+          Deepmark Insight Data delivers the authoritative intelligence and
+          clarity you need to inform strategy, drive growth, and make decisions
+          with confidence.
         </p>
 
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4">

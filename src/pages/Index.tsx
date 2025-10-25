@@ -31,9 +31,8 @@ const Index = () => {
     };
   }, []);
 
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="">
       <Header />
       <main className="overflow-hidden">
         <Hero />

@@ -1,5 +1,11 @@
 import { useEffect, useRef } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import value1 from "@/assets/value-1.png";
 import value2 from "@/assets/value-2.png";
 import value3 from "@/assets/value-3.png";
@@ -12,18 +18,21 @@ const values = [
   {
     image: value1,
     title: "25+ Years of Expertise",
-    description: "Leverage a legacy of research leadership and proven success to guide your most critical decisions."
+    description:
+      "Leverage a legacy of research leadership and proven success to guide your most critical decisions.",
   },
   {
     image: value2,
     title: "Uncompromising Precision",
-    description: "Our commitment to methodological rigor guarantees data integrity and insights you can trust without question."
+    description:
+      "Our commitment to methodological rigor guarantees data integrity and insights you can trust without question.",
   },
   {
     image: value3,
     title: "Actionable Clarity",
-    description: "We translate complex data into clear, strategic direction, empowering you to act with conviction."
-  }
+    description:
+      "We translate complex data into clear, strategic direction, empowering you to act with conviction.",
+  },
 ];
 
 const OurValue = () => {
@@ -38,13 +47,13 @@ const OurValue = () => {
           trigger: headingRef.current,
           start: "top 80%",
           end: "top 50%",
-          toggleActions: "play none none reverse"
+          toggleActions: "play none none reverse",
         },
         x: -50,
         opacity: 0,
         duration: 0.8,
         stagger: 0.2,
-        ease: "power3.out"
+        ease: "power3.out",
       });
 
       gsap.from(cardsRef.current?.children || [], {
@@ -52,13 +61,13 @@ const OurValue = () => {
           trigger: cardsRef.current,
           start: "top 80%",
           end: "top 40%",
-          toggleActions: "play none none reverse"
+          toggleActions: "play none none reverse",
         },
         y: 100,
         opacity: 0,
         duration: 1,
         stagger: 0.2,
-        ease: "power3.out"
+        ease: "power3.out",
       });
     }, sectionRef);
 
@@ -83,7 +92,10 @@ const OurValue = () => {
 
         <div ref={cardsRef} className="grid md:grid-cols-3 gap-8">
           {values.map((value, index) => (
-            <Card key={index} className="border-0 shadow-none bg-transparent overflow-hidden group">
+            <Card
+              key={index}
+              className="border-0 shadow-none bg-transparent overflow-hidden group"
+            >
               <div className="relative overflow-hidden rounded-lg mb-6">
                 <img
                   src={value.image}

@@ -55,7 +55,7 @@ const clients = [
   { name: "KPMG", color: "#0066CC", logo: kpmg },
   { name: "EY", color: "#FFE600", logo: ey },
   { name: "PwC", color: "#FF6600", logo: pwc },
-  { name: "Malaria Consortium", color: "#008B8B", logo: malariaconsortium }
+  { name: "Malaria Consortium", color: "#008B8B", logo: malariaconsortium },
 ];
 
 const ClientLogos = () => {
@@ -70,12 +70,12 @@ const ClientLogos = () => {
           trigger: headingRef.current,
           start: "top 80%",
           end: "top 50%",
-          toggleActions: "play none none reverse"
+          toggleActions: "play none none reverse",
         },
         y: 50,
         opacity: 0,
         duration: 0.8,
-        ease: "power3.out"
+        ease: "power3.out",
       });
 
       gsap.from(logosRef.current?.children || [], {
@@ -83,13 +83,13 @@ const ClientLogos = () => {
           trigger: logosRef.current,
           start: "top 80%",
           end: "top 30%",
-          toggleActions: "play none none reverse"
+          toggleActions: "play none none reverse",
         },
         scale: 0.8,
         opacity: 0,
         duration: 0.6,
         stagger: 0.05,
-        ease: "back.out(1.7)"
+        ease: "back.out(1.7)",
       });
     }, sectionRef);
 
@@ -97,14 +97,17 @@ const ClientLogos = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-10 px-6 md:px-12 bg-background">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3">
+    <section
+      ref={sectionRef}
+      className="pt-10 pb-20 px-6 md:px-12 bg-background"
+    >
+      <div className="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-3">
         {/* Heading */}
         <div
           ref={headingRef}
-          className="flex flex-col mb-12 gap-6 justify-center md:pb-40"
+          className="flex flex-col mb-12 gap-6 justify-center xl:pb-40"
         >
-          <div >
+          <div>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-px bg-foreground/20"></div>
               <span className="text-sm text-muted-foreground uppercase tracking-wider">
@@ -134,10 +137,7 @@ const ClientLogos = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center col-span-2"
         >
           {clients.map((client, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center"
-            >
+            <div key={index} className="flex items-center justify-center">
               {/* uniform container: set a fixed height and allow images to scale inside */}
               <div className="w-full h-20 flex items-center justify-center">
                 <img
