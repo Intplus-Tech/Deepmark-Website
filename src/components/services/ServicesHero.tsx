@@ -63,8 +63,8 @@ const ServicesHero = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center py-20">
-        <Separator className="mb-3 w-[30px] mx-auto" />
-        <p className="text-white/80 text-sm font-bold mb-12 tracking-wider">
+        <Separator className="mb-2 md:mb-3 w-[30px] mx-auto" />
+        <p className="text-white/80 text-sm font-bold mb-8 tracking-wider">
           Services
         </p>
 
@@ -78,11 +78,11 @@ const ServicesHero = () => {
 
         <div
           ref={statsRef}
-          className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12"
+          className="grid md:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto mb-12"
         >
           {stats.map((stat, index) => (
             <div key={index} className="">
-              <div className="text-5xl font-semibold text-white mb-2">
+              <div className="text-3xl md:text-5xl font-semibold text-white mb-2">
                 {stat.number}
                 <span className="text-primary">{stat.suffix}</span>
               </div>

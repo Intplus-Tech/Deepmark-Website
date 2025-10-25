@@ -33,12 +33,21 @@ const ContactInfo = () => {
   return (
     <div ref={infoRef} className="space-y-8">
       <div className="space-y-4">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-12">
+          We are happy to connect and help
+        </h1>
         <div className="flex items-start gap-3">
           <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
           <div>
-            <p className="text-foreground font-medium mb-1">+234 803 401 6528</p>
-            <p className="text-foreground font-medium mb-1">+234 708 985 9785</p>
-            <p className="text-muted-foreground text-sm">Mon - Fri | 10am to 5pm WAT</p>
+            <p className="text-foreground font-medium mb-1">
+              +234 803 401 6528
+            </p>
+            <p className="text-foreground font-medium mb-1">
+              +234 708 985 9785
+            </p>
+            <p className="text-muted-foreground text-sm">
+              Mon - Fri | 10am to 5pm WAT
+            </p>
           </div>
         </div>
       </div>
@@ -47,7 +56,9 @@ const ContactInfo = () => {
         <div className="flex items-start gap-3">
           <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
           <div>
-            <p className="text-foreground font-medium">info@deepmarkinsight.com</p>
+            <p className="text-foreground font-medium">
+              info@deepmarkinsight.com
+            </p>
           </div>
         </div>
       </div>
@@ -56,13 +67,18 @@ const ContactInfo = () => {
         <div className="flex items-start gap-3">
           <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
           <div className="space-y-3">
-            <p className="text-foreground font-medium leading-relaxed">
-              Deepmark Insight Data Ltd<br />
-              Balogunson Village, Ojuelegba,<br />
+            <p className="text-muted-foreground leading-relaxed">
+              <span className="font-medium text-foreground">
+                Deepmark Insight Data Ltd
+              </span>
+              <br />
+              Balogunson Village, Ojuelegba,
+              <br />
               Hock Lagos, Nigeria
             </p>
-            <p className="text-foreground font-medium leading-relaxed">
-              32, Christian Op-Obosi,<br />
+            <p className="text-muted-foreground leading-relaxed">
+              32, Christian Op-Obosi,
+              <br />
               Hock Lagos, Nigeria
             </p>
           </div>

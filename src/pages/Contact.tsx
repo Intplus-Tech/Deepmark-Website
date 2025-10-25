@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/contact/ContactForm";
 import ContactInfo from "@/components/contact/ContactInfo";
+import Header from "@/components/ContactHeader";
 
 const Contact = () => {
   useEffect(() => {
@@ -13,15 +13,14 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-20">
-        <div className="container mx-auto px-6 py-16">
-          <p className="text-muted-foreground text-sm mb-4 uppercase tracking-wider">
-            Let's Talk
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-12">
-            We are happy to connect and help
-          </h1>
-
+      <main className="pt-16">
+        <div className="container mx-auto py-16">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-px bg-foreground/20"></div>
+            <span className="text-sm text-muted-foreground tracking-wider">
+              Let's Talk
+            </span>
+          </div>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <ContactInfo />
             <ContactForm />

@@ -101,7 +101,7 @@ const OurMission = () => {
         ref={missionRef}
         className="py-20 bg-[hsl(var(--footer-bg))] text-white"
       >
-        <div className="container mx-auto px-6">
+        <div className="container max-w-7xl mx-auto px-6">
           <div ref={missionTextRef} className="max-w-5xl">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-px bg-white/50"></div>
@@ -128,7 +128,7 @@ const OurMission = () => {
         <div className="container mx-auto px-6">
           <div
             ref={purposeImageRef}
-            className="relative w-full h-[400px] mb-12 rounded-2xl overflow-hidden"
+            className="relative w-full h-[400px] mb-12 overflow-hidden"
           >
             <img
               src={teamImage}
@@ -137,13 +137,13 @@ const OurMission = () => {
             />
           </div>
 
-          <div className="flex items-center gap-3 mb-8 mt-20">
+          <div className="flex items-center gap-3 mb-8 mt-20 max-w-7xl mx-auto">
             <div className="w-12 h-px bg-foreground/20"></div>
             <span className="text-sm text-muted-foreground uppercase tracking-wider">
               Our Vision and Values
             </span>
           </div>
-          <div className="grid lg:grid-cols-3  gap-12 items-start">
+          <div className="grid lg:grid-cols-3  gap-12 items-start max-w-7xl mx-auto">
             <div className="lg:col-span-2 mb-8">
               <h3
                 ref={purposeHeadingRef}

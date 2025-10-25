@@ -77,15 +77,18 @@ const WhatWeDo = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-background container mx-auto">
+    <section
+      ref={sectionRef}
+      className="py-20 bg-background container max-w-7xl mx-auto"
+    >
       <div className="flex items-center gap-3 mb-8">
         <div className="w-12 h-px bg-foreground/20"></div>
         <span className="text-sm text-muted-foreground uppercase tracking-wider">
           What We Do
         </span>
       </div>
-      <div className=" px-6 grid grid-cols-2">
-        <div className="gap-12 mb-16 max-w-[80%]">
+      <div className="grid grid-cols-2">
+        <div className="gap-12 mb-16">
           <div>
             <h2
               ref={headingRef}

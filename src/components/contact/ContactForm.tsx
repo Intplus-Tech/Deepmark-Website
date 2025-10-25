@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import {
   Form,
@@ -17,6 +16,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { ArrowRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,7 +26,10 @@ const formSchema = z.object({
     .trim()
     .min(2, { message: "Name must be at least 2 characters" })
     .max(100, { message: "Name must be less than 100 characters" })
-    .regex(/^[a-zA-Z\s'-]+$/, { message: "Name can only contain letters, spaces, hyphens, and apostrophes" }),
+    .regex(/^[a-zA-Z\s'-]+$/, {
+      message:
+        "Name can only contain letters, spaces, hyphens, and apostrophes",
+    }),
   phone: z
     .string()
     .trim()
@@ -43,11 +46,6 @@ const formSchema = z.object({
     .trim()
     .min(10, { message: "Message must be at least 10 characters" })
     .max(1000, { message: "Message must be less than 1000 characters" }),
-  consent: z
-    .boolean()
-    .refine((val) => val === true, {
-      message: "You must acknowledge the privacy policy to submit",
-    }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -63,7 +61,6 @@ const ContactForm = () => {
       phone: "",
       email: "",
       message: "",
-      consent: false,
     },
   });
 
@@ -89,7 +86,6 @@ const ContactForm = () => {
   }, []);
 
   const onSubmit = (data: FormValues) => {
-    // Sanitize and validate data before processing
     const sanitizedData = {
       fullname: data.fullname.trim(),
       phone: data.phone.trim(),
@@ -97,7 +93,6 @@ const ContactForm = () => {
       message: data.message.trim(),
     };
 
-    // Here you would normally send to your backend
     console.log("Form submitted with validated data:", sanitizedData);
 
     toast({
@@ -109,7 +104,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div ref={formRef} className="bg-muted/30 rounded-lg p-6 md:p-8">
+    <div ref={formRef} className="">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
@@ -185,36 +180,23 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
+          <div className="flex flex-col md:flex-row gap-4 text-center md:text-left items-center justify-between">
+            <div className="text-sm font-normal text-muted-foreground cursor-pointer">
+              By submitting this form, I acknowledge receipt{" "}
+              <br className="hidden md:block" /> of the Deepmark Insight Privacy
+              Policy
+            </div>
 
-          <FormField
-            control={form.control}
-            name="consent"
-            render={({ field }) => (
-              <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                <FormControl>
-                  <Checkbox
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                  />
-                </FormControl>
-                <div className="space-y-1 leading-none">
-                  <FormLabel className="text-sm font-normal text-muted-foreground cursor-pointer">
-                    By submitting this form, I acknowledge receipt of the Deepmark Insight Privacy Policy
-                  </FormLabel>
-                  <FormMessage />
-                </div>
-              </FormItem>
-            )}
-          />
-
-          <Button
-            type="submit"
-            size="lg"
-            className="w-full bg-primary hover:bg-primary/90 text-white"
-            disabled={form.formState.isSubmitting}
-          >
-            {form.formState.isSubmitting ? "Submitting..." : "Submit"}
-          </Button>
+            <Button
+              type="submit"
+              size="lg"
+              className="w-fit rounded-full bg-[#31456A] hover:bg-primary/90 text-white"
+              disabled={form.formState.isSubmitting}
+            >
+              {form.formState.isSubmitting ? "Submitting..." : "Submit"}
+              <ArrowRight />
+            </Button>
+          </div>
         </form>
       </Form>
     </div>

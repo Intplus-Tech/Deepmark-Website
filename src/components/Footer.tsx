@@ -54,8 +54,8 @@ const Footer = () => {
   return (
     <footer ref={footerRef} className="">
       <div className="">
-        <div className="mb-16 bg-[hsl(var(--footer-bg))]  px-6 py-16 relaltive">
-          <div className="container mx-auto flex flex-col md:flex-row justify-between gap-8">
+        <div className="mb-16 bg-[hsl(var(--footer-bg))] py-16 relaltive">
+          <div className="container max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
             <div className="w-full">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
                 Stay Informed with <br className="hidden md:block" /> Deepmark
@@ -94,7 +94,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12 container mx-auto text-foreground">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12 container max-w-7xl mx-auto text-foreground">
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6">
               <img

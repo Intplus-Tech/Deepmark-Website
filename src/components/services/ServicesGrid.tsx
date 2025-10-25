@@ -2,16 +2,21 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Target, Map, Award, TrendingUp, Package, FileText, Smartphone, Network } from "lucide-react";
-import consumerBehavior from "@/assets/service-consumer-behavior.jpg";
-import competitive from "@/assets/service-competitive.jpg";
-import marketLandscape from "@/assets/service-market-landscape.jpg";
-import brandResearch from "@/assets/service-brand-research.jpg";
-import newMarket from "@/assets/service-new-market.jpg";
-import productSector from "@/assets/service-product-sector.jpg";
-import feasibility from "@/assets/service-feasibility.jpg";
-import consumerTech from "@/assets/service-consumer-tech.jpg";
-import digitalB2B from "@/assets/service-digital-b2b.jpg";
+import {
+  Users,
+  Target,
+  Map,
+  Award,
+  TrendingUp,
+  Package,
+  FileText,
+  Smartphone,
+  Network,
+  CheckIcon,
+} from "lucide-react";
+import service1 from "@/assets/service-1.jpg";
+import service2 from "@/assets/service-2.jpg";
+import service3 from "@/assets/service-3.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,122 +64,135 @@ const ServicesGrid = () => {
 
   const services = [
     {
-      icon: Users,
-      title: "Consumer Behavior Analysis",
-      description: "In-depth study of consumer preferences, purchasing patterns, and decision-making processes to inform product development and marketing strategies.",
+      title: "Ad Hoc Studies",
+      description:
+        "Our tailored research projects are designed to answer your specific, one-off business questions, providing immediate and actionable insight for critical decision-making.",
       features: [
-        "Purchase behavior mapping",
-        "Consumer segmentation",
-        "Trend forecasting",
+        "Strategic Problem-Solving",
+        "Custom Methodology",
+        "Rapid Insight Generation",
       ],
-      image: consumerBehavior,
+      image: service1,
     },
     {
-      icon: Target,
-      title: "Competitive Intelligence",
-      description: "Comprehensive analysis of competitor strategies, market positioning, and performance to identify opportunities and threats.",
+      title: "Brand Health Tracking",
+      description:
+        "Ongoing measurement of your brand’s vital signs—including awareness, usage, and perception—to monitor performance and guide your long-term marketing strategy.",
       features: [
-        "Competitor benchmarking",
-        "Performance monitoring",
-        "Strategic gap analysis",
+        "Performance Benchmarking",
+        "Trend Analysis",
+        "ROI Measurement",
       ],
-      image: competitive,
+      image: service2,
     },
     {
-      icon: Map,
-      title: "Market Landscape Survey",
-      description: "Holistic assessment of market structure, key players, regulatory environment, and growth dynamics across industries.",
+      title: "Consumer Usage & Attitudes",
+      description:
+        "In-depth profiling of your target market to understand the underlying motivations, routines, and attitudes that drive category behavior and brand choice.",
       features: [
-        "Market size estimation",
-        "Regulatory landscape review",
-        "Growth opportunity identification",
+        "Behavioral Pattern Analysis",
+        "Motivation & Driver Identification",
+        "Market Segmentation",
       ],
-      image: marketLandscape,
+      image: service3,
     },
     {
-      icon: Award,
-      title: "Brand Deep Research",
-      description: "Detailed exploration of brand perception, equity, and positioning to strengthen brand strategy and customer loyalty.",
+      title: "Customer Satisfaction Surveys",
+      description:
+        "Systematic measurement of customer experience and loyalty to identify key drivers of satisfaction, mitigate churn, and foster long-term brand advocacy.",
       features: [
-        "Brand equity measurement",
-        "Positioning strategy",
-        "Customer perception analysis",
+        "Loyalty Driver Analysis",
+        "Experience Gap Identification",
+        "Retention Strategy Development",
       ],
-      image: brandResearch,
+      image: service1,
     },
     {
-      icon: TrendingUp,
-      title: "New Market Profiling",
-      description: "Strategic analysis of emerging markets and new business opportunities to guide market entry and expansion decisions.",
+      title: "Advertising Research",
+      description:
+        "Pre- and post-campaign analysis that measures impact, message recall, and brand lift to maximize the effectiveness and return on investment of your marketing communications.",
       features: [
-        "Market entry assessment",
-        "Risk and opportunity analysis",
-        "Competitive landscape profiling",
+        "Message Recall Testing",
+        "Brand Lift Measurement",
+        "Creative Optimization",
       ],
-      image: newMarket,
+      image: service2,
     },
     {
-      icon: Package,
-      title: "Product Sector Insights",
-      description: "Sector-specific research delivering actionable intelligence on product trends, innovation, and competitive dynamics.",
+      title: "Full Mix Product Testing",
+      description:
+        "Rigorous in-home or central location testing that evaluates product performance, acceptability, and key attributes against competitors to drive launch and guide innovation.",
       features: [
-        "Product performance tracking",
-        "Innovation trend monitoring",
-        "Category dynamics analysis",
+        "Sensory & Attribute Testing",
+        "Competitive Benchmarking",
+        "Purchase Intent Forecasting",
       ],
-      image: productSector,
+      image: service3,
     },
     {
-      icon: FileText,
-      title: "Market Feasibility Studies",
-      description: "Rigorous assessment of business viability, demand potential, and market readiness for new products or services.",
+      title: "Distribution Checks",
+      description:
+        "Comprehensive audits of your product’s retail presence, measuring availability, positioning, and competitive shelf share to optimize sales and supply chain strategy.",
       features: [
-        "Demand forecasting",
-        "Financial viability analysis",
-        "Market readiness evaluation",
+        "Shelf Share Analysis",
+        "Competitive Positioning",
+        "Supply Chain Optimization",
       ],
-      image: feasibility,
+      image: service1,
     },
     {
-      icon: Smartphone,
-      title: "Consumer Technology Survey",
-      description: "Analysis of technology adoption, usage patterns, and consumer attitudes toward emerging digital solutions.",
+      title: "Customer Intercept Surveys",
+      description:
+        "Real-time consumer feedback gathered at the point of experience, delivering immediate insights into behavior, perceptions, and brand interactions in a natural context.",
       features: [
-        "Technology adoption tracking",
-        "Usage pattern analysis",
-        "Digital transformation insights",
+        "In-Moment Feedback Capture",
+        "Experience Quality Assessment",
+        "Immediate Insight Generation",
       ],
-      image: consumerTech,
+      image: service2,
     },
     {
-      icon: Network,
-      title: "Digital B2B Industry",
-      description: "Specialized research on B2B digital ecosystems, procurement trends, and enterprise technology landscapes.",
+      title: "Opinion Poll Studies",
+      description:
+        "Authoritative measurement of public opinion on social, political, or corporate issues, providing a statistically sound snapshot of the population’s beliefs and sentiments.",
       features: [
-        "B2B buyer behavior analysis",
-        "Enterprise technology trends",
-        "Supply chain digital insights",
+        "Public Sentiment Tracking",
+        "Policy & Issue Testing",
+        "Stakeholder Perception Mapping",
       ],
-      image: digitalB2B,
+      image: service3,
     },
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section ref={sectionRef} className="py-10 bg-background">
+      <div className="container max-w-7xl mx-auto px-6">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-12 h-px bg-foreground/20"></div>
+          <span className="text-sm text-muted-foreground tracking-wider">
+            What We Do
+          </span>
+        </div>
         <h2
           ref={headingRef}
-          className="text-2xl md:text-3xl font-bold text-foreground mb-4 max-w-4xl"
+          className="text-2xl md:text-3xl font-semibold text-foreground mb-4 max-w-4xl"
         >
-          Comprehensive solutions designed to transform market complexity into your competitive advantage.
+          Comprehensive solutions designed to transform market complexity into
+          your competitive advantage.
         </h2>
 
-        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <p className="max-w-2xl text-muted-foreground">
+          At Deepmark Insight Data, we deploy a suite of rigorous research
+          methodologies to illuminate the path forward for your business. Each
+          service is crafted to deliver precise, actionable intelligence.
+        </p>
+
+        <div
+          ref={cardsRef}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12"
+        >
           {services.map((service, index) => (
-            <Card
-              key={index}
-              className="group overflow-hidden hover:shadow-lg transition-shadow duration-300"
-            >
+            <div key={index} className="border-one ">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={service.image}
@@ -182,15 +200,10 @@ const ServicesGrid = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/90 flex items-center justify-center">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                </div>
               </div>
-              
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+
+              <div className="">
+                <h3 className="text-xl font-semibold text-foreground my-3">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
@@ -200,15 +213,17 @@ const ServicesGrid = () => {
                   {service.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="text-sm text-muted-foreground flex items-start gap-2"
+                      className="text-sm text-muted-foreground flex items-start gap-2 font-medium"
                     >
-                      <span className="text-primary mt-0.5">•</span>
+                      <span className="text-red-500 mt-0.5">
+                        <CheckIcon />
+                      </span>
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
