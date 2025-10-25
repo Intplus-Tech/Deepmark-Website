@@ -60,19 +60,19 @@ const WhatWeDo = () => {
       icon: GitBranch,
       title: "End-to-End Methodology",
       description:
-        "From study design and data collection to advanced analysis and strategic synthesis, we provide a seamless, integrated approach.",
+        "From study design and data collection to advanced analysis and strategic synthesis, we provide a seamless, integrated research solution.",
     },
     {
       icon: Lightbulb,
       title: "Actionable Intelligence",
       description:
-        "We go beyond raw data to deliver strategic recommendations that are practical, actionable, and designed to drive measurable business outcomes.",
+        "We go beyond data delivery to provide clear, strategic recommendations that are practical, actionable, and designed to drive measurable business outcomes.",
     },
     {
       icon: CheckCircle2,
       title: "Rigorous Precision",
       description:
-        "Our commitment to methodological integrity and data quality ensures that every insight we deliver is reliable, accurate, and trustworthy.",
+        "Our commitment to methodological integrity and data quality ensures that every insight we deliver is reliable, accurate, and built on a foundation of trust.",
     },
   ];
 
@@ -87,12 +87,12 @@ const WhatWeDo = () => {
           What We Do
         </span>
       </div>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-1 xl:grid-cols-2">
         <div className="gap-12 mb-16">
           <div>
             <h2
               ref={headingRef}
-              className="text-3xl md:text-4xl font-medium leading-10 text-foreground mb-6"
+              className="text-2xl md:text-4xl font-medium leading-10 text-foreground mb-6"
             >
               We deliver deep market intelligence that illuminates opportunities
               and informs strategy.
@@ -118,12 +118,18 @@ const WhatWeDo = () => {
           </div>
         </div>
 
-        <div ref={cardsRef} className="flex flex-col gap-8">
+        <div
+          ref={cardsRef}
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-8"
+        >
           {features.map((feature, index) => (
-            <div key={index} className="flex gap-8 bg-card ml-auto max-w-[80%]">
+            <div
+              key={index}
+              className="flex flex-col xl:flex-row gap-8 bg-card xl:ml-auto mx-auto xl:mx-0 max-w-[80%]"
+            >
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-[#B3B3B2] flex items-center justify-center">
-                  <feature.icon className="w-6 h-6 text-[#1D60E5]" />
+                <div className="w-12 h-12 mx-auto rounded-full bg-[#B3B3B2]/20 flex items-center justify-center">
+                  <feature.icon className="w-6 h-6 text-[#1D60E5]/50" />
                 </div>
               </div>
               <div>

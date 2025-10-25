@@ -143,7 +143,7 @@ const OurMission = () => {
               Our Vision and Values
             </span>
           </div>
-          <div className="grid lg:grid-cols-3  gap-12 items-start max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-3  md:gap-12 items-start max-w-7xl mx-auto">
             <div className="lg:col-span-2 mb-8">
               <h3
                 ref={purposeHeadingRef}

@@ -185,7 +185,7 @@ const Footer = () => {
                 Cookie Policy
               </Link>
             </div>
-            <p className="text-sm text-foreground">
+            <p className="text-sm text-foreground text-center md:text-left">
               Copyright © 2025 Deepmark Insight Data. All rights reserved.
             </p>
           </div>
