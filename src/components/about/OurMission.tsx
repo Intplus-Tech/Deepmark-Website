@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Check } from "lucide-react";
 import teamImage from "@/assets/team-union.png";
+import abstract from "@/assets/abstract-1.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,31 +96,38 @@ const OurMission = () => {
   ];
 
   return (
-    <>
+    <main className="py-10">
       {/* Mission Section */}
       <section
         ref={missionRef}
-        className="py-20 bg-[hsl(var(--footer-bg))] text-white"
+        className="py-20 bg-[hsl(var(--footer-bg))] text-white relative"
       >
         <div className="container max-w-7xl mx-auto px-6">
-          <div ref={missionTextRef} className="max-w-5xl">
+          <div ref={missionTextRef} className="max-w-5xl 2xl:max-w-7xl">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-px bg-white/50"></div>
               <span className="text-sm text-muted-foreground uppercase tracking-wider">
                 Our Mission
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl mb-6">
+            <h2 className="tracking-wide font-semibold text-3xl md:text-4xl 2xl:text-5xl mb-6">
               To provide businesses with the most authoritative market
               intelligence, transforming complex data into strategic clarity and
               competitive advantage.
             </h2>
-            <p className="text-3xl md:text-4xl">
+            <p className="tracking-wide font-semibold text-3xl md:text-4xl 2xl:text-5xl">
               We bridge the gap between raw information and actionable strategy,
               empowering organizations to navigate market dynamics with
               confidence and precision.
             </p>
           </div>
+        </div>
+        <div className="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180 z-0">
+          <img
+            src={abstract}
+            alt="Footer Decorative Element"
+            className="w-[340px] block"
+          />
         </div>
       </section>
 
@@ -165,7 +173,7 @@ const OurMission = () => {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 };
 
