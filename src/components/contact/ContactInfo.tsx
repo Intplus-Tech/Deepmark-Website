@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Smartphone } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,7 +37,10 @@ const ContactInfo = () => {
           We are happy to connect and help
         </h1>
         <div className="flex items-start gap-3">
-          <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+          <Smartphone
+            strokeWidth={0.7}
+            className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-1"
+          />
           <div>
             <p className="text-foreground font-medium mb-1">
               +234 803 581 6248
@@ -52,7 +55,10 @@ const ContactInfo = () => {
 
       <div className="space-y-4">
         <div className="flex items-start gap-3">
-          <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+          <Mail
+            strokeWidth={0.7}
+            className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-1"
+          />
           <div>
             <p className="text-foreground font-medium">
               info@deepmarkinsight.com
@@ -63,7 +69,10 @@ const ContactInfo = () => {
 
       <div className="space-y-4">
         <div className="flex items-start gap-3">
-          <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+          <MapPin
+            strokeWidth={0.7}
+            className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-1"
+          />
           <div className="space-y-3">
             <p className="text-muted-foreground leading-relaxed">
               <span className="font-medium text-foreground">
