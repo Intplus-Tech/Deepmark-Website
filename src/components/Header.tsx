@@ -113,6 +113,7 @@ const Header = () => {
                   variant="default"
                   className="bg-primary hover:bg-primary/90 text-white w-full mt-4"
                   onClick={() => setIsOpen(false)}
+                  asChild
                 >
                   <a
                     href="https://calendly.com/femisesan/deepmark-initial-consultation"

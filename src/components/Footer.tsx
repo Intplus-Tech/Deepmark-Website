@@ -85,13 +85,13 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180 z-0">
+          {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180 z-0">
             <img
               src={Union}
               alt="Footer Decorative Element"
               className="w-full block"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12 container max-w-7xl mx-auto text-foreground">
@@ -173,15 +173,24 @@ const Footer = () => {
         <div className="py-8 border-t container mx-auto">
           <div className="flex flex-col gap-4">
             <div className="flex flex-wrap gap-4 text-sm text-foreground">
-              <Link to="/privacy" className="transition-colors">
+              <Link
+                to="/privacy"
+                className="cursor cursor-pointer transition-colors"
+              >
                 Privacy Policy
               </Link>
               <span>•</span>
-              <Link to="/terms" className="transition-colors">
+              <Link
+                to="/terms"
+                className="cursor cursor-pointer transition-colors"
+              >
                 Terms of Use
               </Link>
               <span>•</span>
-              <Link to="/cookies" className="transition-colors">
+              <Link
+                to="/cookies"
+                className="cursor cursor-pointer transition-colors"
+              >
                 Cookie Policy
               </Link>
             </div>

@@ -40,11 +40,9 @@ const ContactInfo = () => {
           <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
           <div>
             <p className="text-foreground font-medium mb-1">
-              +234 803 401 6528
+              +234 803 581 6248
             </p>
-            <p className="text-foreground font-medium mb-1">
-              +234 708 985 9785
-            </p>
+            <p className="text-foreground font-medium mb-1">+2347088608738</p>
             <p className="text-muted-foreground text-sm">
               Mon - Fri | 10am to 5pm WAT
             </p>
@@ -72,14 +70,7 @@ const ContactInfo = () => {
                 Deepmark Insight Data Ltd
               </span>
               <br />
-              Balogunson Village, Ojuelegba,
-              <br />
-              Hock Lagos, Nigeria
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              32, Christian Op-Obosi,
-              <br />
-              Hock Lagos, Nigeria
+              60, CMD Road Magodo Lagos
             </p>
           </div>
         </div>
