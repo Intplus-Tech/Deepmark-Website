@@ -39,7 +39,6 @@ const About = () => {
     <Layout title={pageTitle} description={pageDescription}>
       {/* 6. Add the structured data component */}
       <StructuredData data={aboutPageSchema} />
-
       <main className="overflow-hidden">
         <AboutHero />
         <WhatWeDo />

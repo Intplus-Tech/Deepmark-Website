@@ -7,7 +7,7 @@ import StructuredData from "@/components/StructuredData";
 import ServicesHero from "@/components/services/ServicesHero";
 import ServicesGrid from "@/components/services/ServicesGrid";
 
-import { slugify } from "@/lib/utils";
+// import { slugify } from "@/lib/utils";
 import { services } from "@/lib/data";
 
 gsap.registerPlugin(ScrollTrigger);
