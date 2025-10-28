@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import heroImage from "@/assets/about-hero-bg.jpg";
+import heroImage from "@/assets/about-hero-bg.webp";
 import { Separator } from "../ui/separator";
 
 const AboutHero = () => {

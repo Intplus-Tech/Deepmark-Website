@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import heroImage from "@/assets/homepage-bg.jpg";
+import heroImage from "@/assets/homepage-bg.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 

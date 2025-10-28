@@ -6,9 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import value1 from "@/assets/value-1.png";
-import value2 from "@/assets/value-2.png";
-import value3 from "@/assets/value-3.png";
+import value1 from "@/assets/value-1.webp";
+import value2 from "@/assets/value-2.webp";
+import value3 from "@/assets/value-3.webp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

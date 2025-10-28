@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/services-hero-bg.jpg";
+import heroImage from "@/assets/services-hero-bg.webp";
 import { Separator } from "../ui/separator";
 
 const ServicesHero = () => {

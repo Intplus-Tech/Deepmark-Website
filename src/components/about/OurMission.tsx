@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Check } from "lucide-react";
-import teamImage from "@/assets/team-union.png";
+import teamImage from "@/assets/team-collaboration.webp";
 import abstract from "@/assets/abstract-1.svg";
 
 gsap.registerPlugin(ScrollTrigger);

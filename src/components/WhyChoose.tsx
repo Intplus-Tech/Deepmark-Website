@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import productsImage from "@/assets/Union-1.jpg";
+import productsImage from "@/assets/Union-1.webp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
