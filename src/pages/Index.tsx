@@ -91,7 +91,6 @@ const Index = () => {
         <ResearchServices />
         <OurValue />
         <ContactSection />
-        <ClientLogos />
       </main>
     </Layout>
   );
