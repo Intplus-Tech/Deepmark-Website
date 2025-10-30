@@ -90,7 +90,7 @@ const WhyChoose = () => {
 
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-foreground leading-10">
                 We are a premier partner for authoritative market intelligence,
-                built on a over 25-year legacy of research excellence.
+                built over 25 years legacy of research excellence
               </h2>
             </div>
 
