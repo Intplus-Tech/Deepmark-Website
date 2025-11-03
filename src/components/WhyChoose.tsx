@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import productsImage from "@/assets/Union-1.webp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -116,7 +117,7 @@ const WhyChoose = () => {
             </div>
 
             <div className=" hidden xl:flex flex-col md:flex-row items-center justify-between pt-6">
-              <div className="flex items-center gap-4">
+              {/* <div className="flex items-center gap-4">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -137,11 +138,13 @@ const WhyChoose = () => {
                 >
                   <ChevronRight className="h-5 w-5" />
                 </Button>
-              </div>
+              </div> */}
 
-              <Button variant="link" className="text-primary group">
-                View all Services
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <Button variant="link" className="text-primary group" asChild>
+                <Link to="/service">
+                  View all Services
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
 
