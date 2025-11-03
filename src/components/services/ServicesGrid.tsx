@@ -1,19 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Users,
-  Target,
-  Map,
-  Award,
-  TrendingUp,
-  Package,
-  FileText,
-  Smartphone,
-  Network,
-  CheckIcon,
-} from "lucide-react";
+import { CheckIcon } from "lucide-react";
 import service1 from "@/assets/service-1.webp";
 import service2 from "@/assets/service-2.webp";
 import service3 from "@/assets/service-3.webp";
@@ -21,9 +9,9 @@ import service3 from "@/assets/service-3.webp";
 gsap.registerPlugin(ScrollTrigger);
 
 const ServicesGrid = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
+  const cardsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -43,7 +31,8 @@ const ServicesGrid = () => {
       );
 
       gsap.fromTo(
-        cardsRef.current?.children || [],
+        // convert HTMLCollection to array safely; fallback to []
+        Array.from(cardsRef.current?.children ?? []),
         { y: 40, opacity: 0 },
         {
           y: 0,
@@ -59,7 +48,33 @@ const ServicesGrid = () => {
       );
     }, sectionRef);
 
-    return () => ctx.revert();
+    // If route included #service, scroll into view after render
+    const scrollToHash = (smooth = true) => {
+      if (typeof window === "undefined") return;
+      if (window.location.hash === "#service" && sectionRef.current) {
+        // small delay to ensure the target is mounted
+        setTimeout(() => {
+          sectionRef.current?.scrollIntoView({
+            behavior: smooth ? "smooth" : "auto",
+            block: "start",
+          });
+          // ensure ScrollTrigger recalculates positions after scroll
+          ScrollTrigger.refresh();
+        }, 60);
+      }
+    };
+
+    // on mount, attempt a scroll if hash present
+    scrollToHash(false);
+
+    // also listen to hash changes (handles clicks when already on page)
+    const onHashChange = () => scrollToHash(true);
+    window.addEventListener("hashchange", onHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", onHashChange);
+      ctx.revert();
+    };
   }, []);
 
   const services = [
@@ -165,14 +180,16 @@ const ServicesGrid = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-10 bg-background">
+    // <section id="service"> so /service#service scrolls here
+    <section id="service" ref={sectionRef} className="py-10 bg-background">
       <div className="container max-w-7xl mx-auto px-6">
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-12 h-px bg-foreground/20"></div>
+          <div className="w-12 h-px bg-foreground/20" />
           <span className="text-sm text-muted-foreground tracking-wider">
             What We Do
           </span>
         </div>
+
         <h2
           ref={headingRef}
           className="text-2xl md:text-3xl font-semibold text-foreground mb-4 max-w-4xl"
@@ -189,11 +206,10 @@ const ServicesGrid = () => {
 
         <div
           ref={cardsRef}
-          id="service"
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 "
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12"
         >
           {services.map((service, index) => (
-            <div key={index} className="border-one ">
+            <div key={index} className="border-one">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={service.image}
@@ -203,7 +219,7 @@ const ServicesGrid = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
 
-              <div className="">
+              <div>
                 <h3 className="text-xl font-semibold text-foreground my-3">
                   {service.title}
                 </h3>

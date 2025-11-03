@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logo from "@/assets/logo-dark.svg";
 import Union from "@/assets/footer-union.svg";
+import { ScrollLink } from "./ScrollLink ";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,19 +39,19 @@ const Footer = () => {
   ];
 
   const serviceLinks = [
-    { label: "Ad Hoc Studies", path: "/service#/service" },
-    { label: "Brand Health Tracking", path: "/service#/service" },
-    { label: "Consumer Usage & Attitudes", path: "/service#/service" },
-    { label: "Customer Satisfaction Surveys", path: "/service#/service" },
+    { label: "Ad Hoc Studies", path: "/service#service" },
+    { label: "Brand Health Tracking", path: "/service#service" },
+    { label: "Consumer Usage & Attitudes", path: "/service#service" },
+    { label: "Customer Satisfaction Surveys", path: "/service#service" },
   ];
 
-  // const sectorLinks = [
-  //   { label: "FMCG & Retails", path: "/sectors/fmcg" },
-  //   { label: "Healthcare & Pharma", path: "/sectors/healthcare" },
-  //   { label: "Financial Services", path: "/sectors/financial" },
-  //   { label: "Technology & Media", path: "/sectors/technology" },
-  //   { label: "Government & NGOs", path: "/sectors/government" },
-  // ];
+  const sectorLinks = [
+    { label: "FMCG & Retails", path: "/sectors/fmcg" },
+    { label: "Healthcare & Pharma", path: "/sectors/healthcare" },
+    { label: "Financial Services", path: "/sectors/financial" },
+    { label: "Technology & Media", path: "/sectors/technology" },
+    { label: "Government & NGOs", path: "/sectors/government" },
+  ];
 
   return (
     <footer ref={footerRef} className="">
@@ -88,8 +89,8 @@ const Footer = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12 container max-w-7xl mx-auto text-foreground">
-          <div className="md:col-span-3">
-            <Link to="/" className="flex items-center gap-2 mb-6">
+          <div className="md:col-span-2">
+            <Link to="#" className="flex items-center gap-2 mb-6 cursor-none">
               <img
                 src={logo}
                 alt="Deepmark Insight Data"
@@ -134,32 +135,25 @@ const Footer = () => {
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.path}>
-                  <Link
+                  <ScrollLink
                     to={link.path}
-                    className=" transition-colors text-sm hover:underine hover:underline-offset-4"
+                    className="transition-colors text-sm hover:underline hover:underline-offset-4"
                   >
                     {link.label}
-                  </Link>
+                  </ScrollLink>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* <div>
+          <div>
             <h3 className="font-medium mb-4 text-lg">Sector</h3>
             <ul className="space-y-3">
               {sectorLinks.map((link) => (
-                <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className=" transition-colors text-sm hover:underine hover:underline-offset-4"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
+                <li key={link.path}>{link.label}</li>
               ))}
             </ul>
-          </div> */}
+          </div>
         </div>
 
         <div className="py-8 border-t container mx-auto">
