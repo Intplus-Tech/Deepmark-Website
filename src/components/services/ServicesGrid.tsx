@@ -189,7 +189,8 @@ const ServicesGrid = () => {
 
         <div
           ref={cardsRef}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12"
+          id="service"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 "
         >
           {services.map((service, index) => (
             <div key={index} className="border-one ">

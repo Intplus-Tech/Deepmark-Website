@@ -103,17 +103,10 @@ const WhatWeDo = () => {
               ref={descriptionRef}
               className="text-muted-foreground text-base leading-relaxed mb-6"
             >
-              With over 25 years of specialized experience, we have guided more
-              than 50 client projects, developing unmatched sector expertise and
-              a profound understanding of the nuanced factors that drive market
-              behavior.
-            </p>
-            <p
-              ref={descriptionRef}
-              className="text-muted-foreground text-base leading-relaxed"
-            >
-              Here are the key differentiators that separate us from other
-              firms:
+              With over 25 years of specialized experience, we have successfully
+              guided more than 50 client projects, building deep sector
+              expertise and a thorough understanding of the subtle dynamics that
+              shape market behavior.
             </p>
           </div>
         </div>

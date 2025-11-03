@@ -45,7 +45,7 @@ const ServicesHero = () => {
   }, []);
 
   const stats = [
-    { number: "20", label: "Years of Research Excellence", suffix: "+" },
+    { number: "25", label: "Years of Research Excellence", suffix: "+" },
     { number: "500", label: "Projects Successfully Delivered", suffix: "+" },
     { number: "50", label: "Major Client Partnerships", suffix: "+" },
   ];

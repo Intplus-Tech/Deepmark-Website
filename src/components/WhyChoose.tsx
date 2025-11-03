@@ -108,8 +108,8 @@ const WhyChoose = () => {
 
               <p className="text-muted-foreground leading-relaxed">
                 Our research design experts delve deep into your business
-                objectives to construct a robust methodological framework. We
-                ensure the approach is quantifying sound, logically flawless,
+                objectives to construct a robust methodological framework.We
+                ensure the approach is quantitatively sound, logically flawless,
                 and precisely targeted to deliver the clear, actionable insights
                 you require.
               </p>

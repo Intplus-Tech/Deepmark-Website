@@ -31,25 +31,26 @@ const Footer = () => {
 
   const companyLinks = [
     { label: "About us", path: "/about" },
-    { label: "Our Insights", path: "/insights" },
-    { label: "Careers", path: "/careers" },
+    { label: "Service", path: "/service" },
+    // { label: "Our Insights", path: "/insights" },
+    // { label: "Careers", path: "/careers" },
     { label: "Contact", path: "/contact" },
   ];
 
   const serviceLinks = [
-    { label: "Ad Hoc Studies", path: "/services/ad-hoc" },
-    { label: "Brand Health Tracking", path: "/services/brand-health" },
-    { label: "Consumer Insights", path: "/services/consumer-insights" },
-    { label: "Sector Analysis", path: "/services/sector-analysis" },
+    { label: "Ad Hoc Studies", path: "/service#/service" },
+    { label: "Brand Health Tracking", path: "/service#/service" },
+    { label: "Consumer Usage & Attitudes", path: "/service#/service" },
+    { label: "Customer Satisfaction Surveys", path: "/service#/service" },
   ];
 
-  const sectorLinks = [
-    { label: "FMCG & Retails", path: "/sectors/fmcg" },
-    { label: "Healthcare & Pharma", path: "/sectors/healthcare" },
-    { label: "Financial Services", path: "/sectors/financial" },
-    { label: "Technology & Media", path: "/sectors/technology" },
-    { label: "Government & NGOs", path: "/sectors/government" },
-  ];
+  // const sectorLinks = [
+  //   { label: "FMCG & Retails", path: "/sectors/fmcg" },
+  //   { label: "Healthcare & Pharma", path: "/sectors/healthcare" },
+  //   { label: "Financial Services", path: "/sectors/financial" },
+  //   { label: "Technology & Media", path: "/sectors/technology" },
+  //   { label: "Government & NGOs", path: "/sectors/government" },
+  // ];
 
   return (
     <footer ref={footerRef} className="">
@@ -61,22 +62,14 @@ const Footer = () => {
                 Stay Informed with <br className="hidden md:block" /> Deepmark
                 Insights
               </h2>
-              <p className="text-white/70 mb-6 max-w-2xl">
-                Get authoritative market intelligence direct to your inbox
-              </p>
-              <p className="text-white/60 text-sm mb-6 max-w-2xl">
-                The latest research, sector analysis, and strategic insights,
-                sent straight to <br className="hidden md:block" /> your inbox
-                every month.
-              </p>
             </div>
-            <div className="flex flex-col gap-3 w-full items-end">
+            <div className="flex flex-col md:flex-row gap-3 w-full items-center">
               <Input
                 type="email"
                 placeholder="Email Address"
-                className="bg-white/5 border-white/10 h-16 text-white placeholder:text-white/40 max-w-[600px] rounded-none md:mb-4"
+                className="bg-white/5 border-white/10 h-12 text-white placeholder:text-white/40 max-w-[600px] rounded-none"
               />
-              <Button className="bg-white w-full md:w-fit rounded-none ml-auto h-12  hover:bg-white/90 text-[hsl(var(--footer-bg))] font-semibold">
+              <Button className="bg-white w-full md:w-fit rounded-none h-12  hover:bg-white/90 text-[hsl(var(--footer-bg))] font-semibold">
                 <span className="flex items-center gap-12">
                   Subscribe
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -95,7 +88,7 @@ const Footer = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12 container max-w-7xl mx-auto text-foreground">
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <Link to="/" className="flex items-center gap-2 mb-6">
               <img
                 src={logo}
@@ -104,9 +97,8 @@ const Footer = () => {
               />
             </Link>
             <p className="text-sm mb-6 max-w-[400px]">
-              Deepmark Insight Data transforms complex market information into
-              profound clarity, empowering businesses to make strategic
-              decisions with confidence.
+              Transforming complex market information into profound clarity,
+              empowering businesses to make strategic decisions with confidence.
             </p>
             {/* <div className="flex gap-4">
               <a href="#" className=" transition-colors size-10 rounded-full flex items-center justify-center border">
@@ -153,7 +145,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="font-medium mb-4 text-lg">Sector</h3>
             <ul className="space-y-3">
               {sectorLinks.map((link) => (
@@ -167,7 +159,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="py-8 border-t container mx-auto">

@@ -48,7 +48,7 @@ const AboutHero = () => {
           ref={headingRef}
           className="text-4xl md:text-5xl font-semibold text-white mb-6"
         >
-          We are the premier authority in market intelligence, built on a legacy
+          We are a premier authority in market intelligence, built on a legacy
           of research excellence.
         </h1>
         <p

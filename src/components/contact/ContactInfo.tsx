@@ -45,7 +45,9 @@ const ContactInfo = () => {
             <p className="text-foreground font-medium mb-1">
               +234 803 581 6248
             </p>
-            <p className="text-foreground font-medium mb-1">+2347088608738</p>
+            <p className="text-foreground font-medium mb-1">
+              +234 708 860 8738
+            </p>
             <p className="text-muted-foreground text-sm">
               Mon - Fri | 10am to 5pm WAT
             </p>
