@@ -43,6 +43,7 @@ const Footer = () => {
     { label: "Brand Health Tracking", path: "/service#service" },
     { label: "Consumer Usage & Attitudes", path: "/service#service" },
     { label: "Customer Satisfaction Surveys", path: "/service#service" },
+    { label: "Advertising Research", path: "/service#service" },
   ];
 
   const sectorLinks = [
@@ -148,7 +149,7 @@ const Footer = () => {
 
           <div>
             <h3 className="font-medium mb-4 text-lg">Sector</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-sm">
               {sectorLinks.map((link) => (
                 <li key={link.path}>{link.label}</li>
               ))}
